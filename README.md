@@ -20,7 +20,12 @@ Detection Copilot 是一款基于 GPT 大型语言模型预设文本原理构建
 ![G5(K2F$F$)@WFYN{DY~1JW0](https://github.com/rhouselyn/Detection-Copilot/assets/125283997/8fd54a25-5aa6-4f29-824f-9090b7c2bd88)
 
 ### 如何使用
-请自行在包内创建.env文件存放apikeys以调用chatgpt，格式为
+1. 下载依赖
+```
+pip install -r requirement.txt
+```
+2. 请自行在包内创建.env文件存放apikeys以调用chatgpt，和img_path存放默认选取图片打开地址，格式为
 ```
 api_keys = key1,key2 # 逗号后无空格
+img_path = path\to\your\imgs
 ```
