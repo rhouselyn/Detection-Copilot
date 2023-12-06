@@ -30,6 +30,7 @@ box_color = "red"
 is_label = True
 is_score = False
 ```
+具体可以在config.py内调整
 
 ### 如何使用
 1. 下载项目
