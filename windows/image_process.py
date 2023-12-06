@@ -38,7 +38,7 @@ def label_image(image, detected_objects):
     if not image:
         return None
 
-    label_color = config.label_color
+    word_color = config.word_color
     box_color = config.box_color
     threshold = config.threshold
     is_label = config.is_label
@@ -71,7 +71,7 @@ def label_image(image, detected_objects):
                 display_text = ""
 
             # Draw the text with black color
-            draw.text((box[0], box[1]), display_text, fill=label_color, font=font)
+            draw.text((box[0], box[1]), display_text, fill=word_color, font=font)
 
     return image
 

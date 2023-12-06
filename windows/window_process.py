@@ -1,9 +1,14 @@
+import os
+
 from PIL import Image
 from PyQt5.QtCore import pyqtSignal, QThread, Qt
 from PyQt5.QtWidgets import QFileDialog
 
 from models import chatbot, execute_code as execute
 from windows import image_process
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 def send_message(self):
@@ -28,8 +33,9 @@ def clear_chat(self):
 
 
 def choose_image(self):
+    img_path = os.getenv("img_path")
     image_path, _ = QFileDialog.getOpenFileName(self, 'Choose Image',
-                                                r"C:\Users\14815\Desktop\寄系\创新实践\dataset\COCODIR\val2017",
+                                                img_path,
                                                 'Image Files (*.jpg *.png *.jpeg)')
     if image_path:  # Check if a file was selected
         rgb_image = Image.open(image_path).convert("RGB")

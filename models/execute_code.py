@@ -16,7 +16,7 @@ import config
 model = config.model
 object_list = config.object_list
 threshold = config.threshold
-label_color = config.label_color
+word_color = config.word_color
 box_color = config.box_color
 is_label = config.is_label
 is_score = config.is_score
@@ -26,7 +26,7 @@ is_score = config.is_score
 config.model = model
 config.object_list = object_list
 config.threshold = threshold
-config.label_color = label_color
+config.word_color = word_color
 config.box_color = box_color
 config.is_label = is_label
 config.is_score = is_score

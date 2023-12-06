@@ -76,12 +76,14 @@ def get_output(prompt):
         unique_labels.add(obj["label"])  # 添加标签到集合中
 
     current_total_objects = list(unique_labels)  # 将集合转换为列表
+    current_result = list(set(config.object_list) & set(current_total_objects))
 
     prompt = f"""
 total result: {current_total_objects}
+current result: {"total result" if current_result == current_total_objects else current_result}
 model = {config.model}
 threshold = {config.threshold}
-label_color = {config.label_color}
+word_color = {config.word_color}
 box_color = {config.box_color}
 is_label = {config.is_label}
 is_score = {config.is_score}  
