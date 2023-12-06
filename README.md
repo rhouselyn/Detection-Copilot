@@ -38,4 +38,4 @@ img_path = path\to\your\imgs
 ```
 python main.py
 ```
-进入界面选取图像后即可对话使用
+进入界面后即可选取图像对话使用
