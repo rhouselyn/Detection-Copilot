@@ -34,3 +34,8 @@ pip install -r requirement.txt
 api_keys = key1,key2 # 逗号后无空格，不需要双引号
 img_path = path\to\your\imgs
 ```
+4. 运行
+```
+python main.py
+```
+进入界面选取图像后即可对话使用
