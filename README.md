@@ -19,6 +19,17 @@ Detection Copilot 是一款基于 GPT 大型语言模型预设文本原理构建
 
 ![G5(K2F$F$)@WFYN{DY~1JW0](https://github.com/rhouselyn/Detection-Copilot/assets/125283997/8fd54a25-5aa6-4f29-824f-9090b7c2bd88)
 
+### 默认配置
+```
+model = "resnet-50"
+object_list = coco_dataset
+threshold = 0.7
+word_color = "black"
+box_color = "red"
+is_label = True
+is_score = False
+```
+
 ### 如何使用
 1. 下载项目
 ```
