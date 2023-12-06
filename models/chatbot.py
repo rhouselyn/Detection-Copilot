@@ -1,8 +1,14 @@
 from openai import OpenAI
 import config
 from windows import image_process
+import os
+from dotenv import load_dotenv
+load_dotenv()
+API_KEY = os.getenv("api_keys")
 
-api_keys = ["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"]  # 多个API密钥
+api_keys = API_KEY.split(',')
+
+
 dialog = config.prompt
 
 

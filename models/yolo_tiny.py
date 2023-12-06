@@ -10,11 +10,8 @@ def detect(image):
     image_processor = yolo_image_processor
 
     # 预处理图像并进行对象检测
-    start_time = time.time()
     inputs = image_processor(images=image, return_tensors="pt")
     outputs = model(**inputs)
-    elapsed_time = time.time() - start_time
-    print(f"Time: {elapsed_time}")
 
     # 后处理获取结果
     target_sizes = torch.tensor([image.size[::-1]])

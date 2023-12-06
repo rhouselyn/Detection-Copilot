@@ -9,7 +9,7 @@ from models import yolo_tiny, resnet50, fasterRCNN
 current_total_objects = []
 
 
-def process_new_image(image):
+def process_new_image(image, obj_list=None):
     global current_total_objects
 
     copy_image = image.copy()
@@ -26,7 +26,12 @@ def process_new_image(image):
     else:
         return None
 
-    return label_image(copy_image, current_total_objects)
+    detected_objects = current_total_objects
+
+    if obj_list:
+        detected_objects = [obj for obj in current_total_objects if obj["label"] in obj_list]
+
+    return label_image(copy_image, detected_objects)
 
 
 def label_image(image, detected_objects):
@@ -80,7 +85,7 @@ def update_label(image, update_model):
         return None
 
     if update_model:
-        return process_new_image(image)
+        return process_new_image(image, config.object_list)
     else:
         return label_image(image, detected_objects)
 
